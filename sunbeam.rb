@@ -5,20 +5,20 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://github.com/sunbeamlauncher/sunbeam"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.4/sunbeam_Darwin_x86_64.tar.gz"
-      sha256 "2b7e4a7f18fed87d909cf779ed7c550998fe018c8e110f24f4f71f4ec861e6c3"
+    if Hardware::CPU.arm?
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.5/sunbeam_Darwin_arm64.tar.gz"
+      sha256 "e900d23c2603f526f48326afa8c204a819e06798d56310aea478ce547ad9ea1f"
 
       def install
         bin.install "sunbeam"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.4/sunbeam_Darwin_arm64.tar.gz"
-      sha256 "cf03d8badabc8681f339f4a752713cb84cd3f1ff0d81651fc9eae25c4a4a9f36"
+    if Hardware::CPU.intel?
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.5/sunbeam_Darwin_x86_64.tar.gz"
+      sha256 "ec642e7fdeae0c908eecbe0f05b7f8675049bed7374f4fae4c315a48a86c812d"
 
       def install
         bin.install "sunbeam"
@@ -27,17 +27,17 @@ class Sunbeam < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.4/sunbeam_Linux_arm64.tar.gz"
-      sha256 "6d683d2525fc0fe6b282fad2b943cfb95d059cd09dc42c5d89022e6a1174d559"
+    if Hardware::CPU.intel?
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.5/sunbeam_Linux_x86_64.tar.gz"
+      sha256 "cc0f185bd149b2f61f14c11b42ff1fee7553ef097e2247bbdf427eb5bdfd9ab6"
 
       def install
         bin.install "sunbeam"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.4/sunbeam_Linux_x86_64.tar.gz"
-      sha256 "b9e7574a271fd45ba556b0be6b1018f27c2c95d5ed1ed5ec2864b0cbf4cbe819"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.5/sunbeam_Linux_arm64.tar.gz"
+      sha256 "4a499cb19796f648ef9349747904f04535112d3a3dec197636148fdc1458a72f"
 
       def install
         bin.install "sunbeam"
