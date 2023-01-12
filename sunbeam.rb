@@ -5,20 +5,20 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://github.com/sunbeamlauncher/sunbeam"
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.7/sunbeam_Darwin_x86_64.tar.gz"
-      sha256 "95f8a0c117885f19ea65b516f3a237e26011ba9eaf86d1803ed83806f379b4a3"
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.8/sunbeam_Darwin_x86_64.tar.gz"
+      sha256 "a8bbf90d4ceceb4fb9de3caf9d1d49a59dee69eddbed7b7836366b2f355a91cd"
 
       def install
         bin.install "sunbeam"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.7/sunbeam_Darwin_arm64.tar.gz"
-      sha256 "38f265c332c8e37ecd88a3a9142ddf2ff97eec2e69772f643a271bda788c40fc"
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.8/sunbeam_Darwin_arm64.tar.gz"
+      sha256 "0775700a047e4f1d46a010472b7200d5a84654fce0546560b809df0f727f4fe5"
 
       def install
         bin.install "sunbeam"
@@ -28,16 +28,16 @@ class Sunbeam < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.7/sunbeam_Linux_arm64.tar.gz"
-      sha256 "dd5467bb9d4d90793b8816bbc064315975ccab219151fe25ccdd89538c24b2ce"
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.8/sunbeam_Linux_arm64.tar.gz"
+      sha256 "b7f7bd8bab23f11510bbb73be72f3c1603b84619b326059fd9f164ce6af66a39"
 
       def install
         bin.install "sunbeam"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.7/sunbeam_Linux_x86_64.tar.gz"
-      sha256 "e18d2a88de5133f429df1fbc6881f99807c71cb851f96fa25dda982c550dbaaa"
+      url "https://github.com/sunbeamlauncher/sunbeam/releases/download/v0.0.8/sunbeam_Linux_x86_64.tar.gz"
+      sha256 "81ac36b122a2ed673220c37945a44cffe95bbb1f72657e7945756500c5a0cdf7"
 
       def install
         bin.install "sunbeam"
