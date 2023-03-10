@@ -5,20 +5,20 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://pomdtr.github.io/sunbeam"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.0/sunbeam_Darwin_x86_64.tar.gz"
-      sha256 "7db080088e5221eb734468bc0fa784a60c371c5c6ae1187b6ae47a4ecd1b4437"
+    if Hardware::CPU.arm?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.1/sunbeam_Darwin_arm64.tar.gz"
+      sha256 "39ef7ccec095ddd4baf49881b1f2a9548c6258dbd86f471dd286c11546fa8417"
 
       def install
         bin.install "sunbeam"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.0/sunbeam_Darwin_arm64.tar.gz"
-      sha256 "21c9a519b4492dcd4d0e4363e68822aa73f9f874be54cdb1bb6d3e28c9e07d8a"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.1/sunbeam_Darwin_x86_64.tar.gz"
+      sha256 "31fabf6c637b8c275128eaa2be92b58776bbd12275ff54e9733ad3c328e12703"
 
       def install
         bin.install "sunbeam"
@@ -28,16 +28,16 @@ class Sunbeam < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.0/sunbeam_Linux_arm64.tar.gz"
-      sha256 "79359fa55d3b9731a36043274032f2d3aceb2aca0b2a6bd9f0096b0fc07f5bd4"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.1/sunbeam_Linux_arm64.tar.gz"
+      sha256 "d439a3f6f8236b37ee131055afdfb19e7d002afaf2ccacd2aa9fad3ac3c7e36b"
 
       def install
         bin.install "sunbeam"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.0/sunbeam_Linux_x86_64.tar.gz"
-      sha256 "c9ce31ad4e04c9f4e515383d4676c9fc63b801b225e541d48cc948dbe94f103d"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.2.1/sunbeam_Linux_x86_64.tar.gz"
+      sha256 "fc082e2f8640cea9c6c13c70ee0fe6913ab521c514f63e08a8e3ded36af80af6"
 
       def install
         bin.install "sunbeam"
