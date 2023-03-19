@@ -5,20 +5,20 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://pomdtr.github.io/sunbeam"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.7.0/sunbeam_Darwin_x86_64.tar.gz"
-      sha256 "3d03d035f6fbcac1cac8aa6d07030bb09554a662c7fee88f563341513fa7eca3"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.8.0/sunbeam_Darwin_x86_64.tar.gz"
+      sha256 "e7ffb0c7b3f6ff1b3500735e722af2980a7ed513e91f491c0e4665dab18fdde1"
 
       def install
         bin.install "sunbeam"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.7.0/sunbeam_Darwin_arm64.tar.gz"
-      sha256 "c2460672637ccd588e94dc968896635c78db21347f73646f54d22e068287ad98"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.8.0/sunbeam_Darwin_arm64.tar.gz"
+      sha256 "304488984811c790da3860ce4aa85729acc97d58809fb6a1588e3c0e02e7e933"
 
       def install
         bin.install "sunbeam"
@@ -28,16 +28,16 @@ class Sunbeam < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.7.0/sunbeam_Linux_arm64.tar.gz"
-      sha256 "3088787504e0c94cb483c9e1e0f14b114da447edc7815e4b925971974718603d"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.8.0/sunbeam_Linux_arm64.tar.gz"
+      sha256 "e0b7e45cf5156e58d0300fa0ca6c774b666015a678aecbba33b4c4d8828405a0"
 
       def install
         bin.install "sunbeam"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.7.0/sunbeam_Linux_x86_64.tar.gz"
-      sha256 "8524df5390b4a9ba354eb97c1a9d1e972b0e33fc1d2e7aeef6af8e231a9aa491"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.8.0/sunbeam_Linux_x86_64.tar.gz"
+      sha256 "83859348f69116ecbb5ad197e5337833fca570110e48298866efc4635ebdacb4"
 
       def install
         bin.install "sunbeam"
