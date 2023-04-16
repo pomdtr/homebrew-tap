@@ -5,20 +5,20 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://pomdtr.github.io/sunbeam"
-  version "0.9.1"
+  version "0.9.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.1/sunbeam_Darwin_x86_64.tar.gz"
-      sha256 "e9281001adaab5bdd01b99c8c76bb19ab5da96c6387125814c13338f226e51ce"
+    if Hardware::CPU.arm?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.2/sunbeam_Darwin_arm64.tar.gz"
+      sha256 "551e52cb553ce70d57c007c49ef553c7c51bbd6a07acbf650625a612df399d6f"
 
       def install
         bin.install "sunbeam"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.1/sunbeam_Darwin_arm64.tar.gz"
-      sha256 "78a7369008c1e828f227b7e1fd4fada85a616f3e3808349186df56745ac43296"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.2/sunbeam_Darwin_x86_64.tar.gz"
+      sha256 "9ef423c244fdcc38fe0f2ec1f6e401b2eb3dd63b05ab53793d26f20112370b3f"
 
       def install
         bin.install "sunbeam"
@@ -27,17 +27,17 @@ class Sunbeam < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.1/sunbeam_Linux_x86_64.tar.gz"
-      sha256 "16a2df2055115fbef385739fdb72c6410264e04d17c96acd03a5e430cc9af963"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.2/sunbeam_Linux_arm64.tar.gz"
+      sha256 "b94ffa9d567160ba577341117b01438af255c563ed9c690410dfef58895f0dd6"
 
       def install
         bin.install "sunbeam"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.1/sunbeam_Linux_arm64.tar.gz"
-      sha256 "9bb7daebe044dcf44e1edb80800a6fe81f894ea9bdd8d7ddecc5e585f5f3bb56"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.2/sunbeam_Linux_x86_64.tar.gz"
+      sha256 "138bc949d2468176a5a36cbd0500abb57d8d4d41e423094478ff6046e7036038"
 
       def install
         bin.install "sunbeam"
