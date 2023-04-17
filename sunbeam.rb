@@ -5,42 +5,54 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://pomdtr.github.io/sunbeam"
-  version "0.9.6"
+  version "0.9.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.6/sunbeam_Darwin_arm64.tar.gz"
-      sha256 "aa0355998ee29466d9e471217c5dd91a32d59b4ef8aec53f6f1d16c25f2a45e8"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.7/sunbeam_Darwin_arm64.tar.gz"
+      sha256 "21dd1e4b0a4894c6733e581218460a3e724d48daf3dc7ea9f3d2f19f68274329"
 
       def install
         bin.install "sunbeam"
+        bash_completion.install "completions/sunbeam.bash"
+        zsh_completion.install "completions/sunbeam.zsh"
+        fish_completion.install "completions/sunbeam.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.6/sunbeam_Darwin_x86_64.tar.gz"
-      sha256 "14147639c802c1aa92574b7bdfbb1fafbcc30e80fcae35c294ea7f6e65c07742"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.7/sunbeam_Darwin_x86_64.tar.gz"
+      sha256 "5b907135bdd2ad217d0c0613470d424075bdb9da3a57fbb52fcd686aa2320ee9"
 
       def install
         bin.install "sunbeam"
+        bash_completion.install "completions/sunbeam.bash"
+        zsh_completion.install "completions/sunbeam.zsh"
+        fish_completion.install "completions/sunbeam.fish"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.6/sunbeam_Linux_arm64.tar.gz"
-      sha256 "5646a640319eb388b889026a4439033f5dca125e284d93705db3d1ddaad97e28"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.7/sunbeam_Linux_x86_64.tar.gz"
+      sha256 "d4b763f69208a3c1afbe5d09af6785acb428b2a3d60f53aba996b64181e7ab40"
 
       def install
         bin.install "sunbeam"
+        bash_completion.install "completions/sunbeam.bash"
+        zsh_completion.install "completions/sunbeam.zsh"
+        fish_completion.install "completions/sunbeam.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.6/sunbeam_Linux_x86_64.tar.gz"
-      sha256 "e6bf359ffefd130164c004de969c86dc7d84b8a9415be3258baf7465a4080eea"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v0.9.7/sunbeam_Linux_arm64.tar.gz"
+      sha256 "46b0c9ba923e39f19aa23a8e88ce01eabd6bf94b48542c630282a244c2011207"
 
       def install
         bin.install "sunbeam"
+        bash_completion.install "completions/sunbeam.bash"
+        zsh_completion.install "completions/sunbeam.zsh"
+        fish_completion.install "completions/sunbeam.fish"
       end
     end
   end
