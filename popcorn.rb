@@ -5,12 +5,12 @@
 class Popcorn < Formula
   desc ""
   homepage "https://pomdtr.github.io/popcorn"
-  version "0.0.2"
+  version "1.0.0-rc.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/popcorn/releases/download/v0.0.2/popcorn-0.0.2-darwin_arm64.tar.gz"
-      sha256 "327e6f8a06f0dceb28f89b2871455315260ae9af8b77f5f6368b2880c6436dc3"
+      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.7/popcorn-1.0.0-rc.7-darwin_arm64.tar.gz"
+      sha256 "1601c664c565b877d9520e8bc57642a98a1311e040761ae1322b2b77cdd85210"
 
       def install
         bin.install "popcorn"
@@ -20,8 +20,8 @@ class Popcorn < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/popcorn/releases/download/v0.0.2/popcorn-0.0.2-darwin_amd64.tar.gz"
-      sha256 "43fbf54d1189dfd0229a93124e6a2e81aaa870d26d3b303b348b75ac1a235ac8"
+      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.7/popcorn-1.0.0-rc.7-darwin_amd64.tar.gz"
+      sha256 "30a0a1d1bfbee7669affc1a8690e90e5075c99ff599b6bb1004e795f317ebb66"
 
       def install
         bin.install "popcorn"
@@ -34,8 +34,8 @@ class Popcorn < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/popcorn/releases/download/v0.0.2/popcorn-0.0.2-linux_amd64.tar.gz"
-      sha256 "901e7929cee56cabb1099cfa04083c4525005945233e1bd56abbe2297e2a31c8"
+      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.7/popcorn-1.0.0-rc.7-linux_amd64.tar.gz"
+      sha256 "b898d5645efbe5fa00ad5d659ab2739c8d6e70916ca80a0ef5a56b2bdebb08f0"
 
       def install
         bin.install "popcorn"
@@ -45,8 +45,8 @@ class Popcorn < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/popcorn/releases/download/v0.0.2/popcorn-0.0.2-linux_arm64.tar.gz"
-      sha256 "2e64cd13f2942688e07460bdc1ccabd4bd4ff3d84b79ddef90eaa395ff493861"
+      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.7/popcorn-1.0.0-rc.7-linux_arm64.tar.gz"
+      sha256 "c63648644f0d2f8d0829295983a4ab7ecc0fd078b209a60665e81b6440668f8b"
 
       def install
         bin.install "popcorn"
