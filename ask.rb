@@ -5,12 +5,12 @@
 class Ask < Formula
   desc ""
   homepage "https://github.com/pomdtr/ask"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-darwin_amd64.tar.gz"
-      sha256 "4e01f6bfafad0fd45c29e6847b025d92bf9860286046f85d5ee951b29a559b91"
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.3/ask-0.1.3-darwin_amd64.tar.gz"
+      sha256 "53715e7dce07d3c5d5a0f6296a31661848a55f86aa59a0463505467669635345"
 
       def install
         bin.install "ask"
@@ -20,8 +20,8 @@ class Ask < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-darwin_arm64.tar.gz"
-      sha256 "08ba3cd7778f7454b94f9bea1fc0e9de9ad56632797f0085b2a1de50cdabf140"
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.3/ask-0.1.3-darwin_arm64.tar.gz"
+      sha256 "d1af9305bdc758de3aec10137a4c73aeb8d7504cdd128d3880bf1c3c274e8504"
 
       def install
         bin.install "ask"
@@ -34,8 +34,8 @@ class Ask < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-linux_arm64.tar.gz"
-      sha256 "9ff8f5112cc654698b524f932d9d3ad9ba2cdce2425188b08a7d66707a8a828c"
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.3/ask-0.1.3-linux_arm64.tar.gz"
+      sha256 "76d6c4e0cb940dfe29e3bcfc061ffd95734e61a158a0b25a6ff27207a5a28497"
 
       def install
         bin.install "ask"
@@ -45,8 +45,8 @@ class Ask < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-linux_amd64.tar.gz"
-      sha256 "b7a16e6fd49c9cec2359457b453da798ae2e853f9e4873b9fee387769c733cf5"
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.3/ask-0.1.3-linux_amd64.tar.gz"
+      sha256 "b8152bd490dde65fe2d7a2e724dfd48b16c48eb2c057ea2e00ae25cadd5df18c"
 
       def install
         bin.install "ask"
