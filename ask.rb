@@ -5,12 +5,12 @@
 class Ask < Formula
   desc ""
   homepage "https://github.com/pomdtr/ask"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.1/ask-0.1.1-darwin_amd64.tar.gz"
-      sha256 "aea24fccd0c52b45a8ebfe6be2b2c3012c86e9ed9d340a11b9dc466ee8665b3a"
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-darwin_amd64.tar.gz"
+      sha256 "4e01f6bfafad0fd45c29e6847b025d92bf9860286046f85d5ee951b29a559b91"
 
       def install
         bin.install "ask"
@@ -20,8 +20,8 @@ class Ask < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.1/ask-0.1.1-darwin_arm64.tar.gz"
-      sha256 "f04d8faebe74351784697f44fab0f8d5113f0af9e148c91af24ab0a60dbb3454"
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-darwin_arm64.tar.gz"
+      sha256 "08ba3cd7778f7454b94f9bea1fc0e9de9ad56632797f0085b2a1de50cdabf140"
 
       def install
         bin.install "ask"
@@ -33,9 +33,9 @@ class Ask < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.1/ask-0.1.1-linux_amd64.tar.gz"
-      sha256 "7c01ee5bb6b3b4a4c6e1e508a674bfa1a9c6c61ee6306c856a3b3e8e91907bc3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-linux_arm64.tar.gz"
+      sha256 "9ff8f5112cc654698b524f932d9d3ad9ba2cdce2425188b08a7d66707a8a828c"
 
       def install
         bin.install "ask"
@@ -44,9 +44,9 @@ class Ask < Formula
         fish_completion.install "completions/ask.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/ask/releases/download/v0.1.1/ask-0.1.1-linux_arm64.tar.gz"
-      sha256 "7dc553264e7b43c09ef4e8b6eb52eb91de6f1a75f4deeb722332ee03cc60b618"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/ask/releases/download/v0.1.2/ask-0.1.2-linux_amd64.tar.gz"
+      sha256 "b7a16e6fd49c9cec2359457b453da798ae2e853f9e4873b9fee387769c733cf5"
 
       def install
         bin.install "ask"
