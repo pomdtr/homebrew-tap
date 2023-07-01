@@ -5,20 +5,20 @@
 class Val < Formula
   desc ""
   homepage "https://github.com/pomdtr/val"
-  version "0.0.3"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/val/releases/download/v0.0.3/val-0.0.3-darwin_arm64.tar.gz"
-      sha256 "dc02500c3672f41dc4f27382998b5977c947e29fe6a558e588edf569c99b80c8"
+      url "https://github.com/pomdtr/val/releases/download/v0.1.0/val-0.1.0-darwin_arm64.tar.gz"
+      sha256 "439ee41900aa89b17986567dfac3bee3c3fd0507aa4526d83682ff39f794b0a6"
 
       def install
         bin.install "val"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/val/releases/download/v0.0.3/val-0.0.3-darwin_amd64.tar.gz"
-      sha256 "24c3378e7477d96bf83de0992d51501f8dc360d2b9f59ec9a8f21c80b629e64c"
+      url "https://github.com/pomdtr/val/releases/download/v0.1.0/val-0.1.0-darwin_amd64.tar.gz"
+      sha256 "a41abd19edd497e875fa42484554112a65f03228f9ce8e0acd39589f3fb27f4a"
 
       def install
         bin.install "val"
@@ -27,17 +27,17 @@ class Val < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/val/releases/download/v0.0.3/val-0.0.3-linux_amd64.tar.gz"
-      sha256 "35d3793d370c3ad04b0f4389819846248475834ccb7afc43caab615455ac24e5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pomdtr/val/releases/download/v0.1.0/val-0.1.0-linux_arm64.tar.gz"
+      sha256 "b9d3f45f75d4e5048ecf9de7bf84efe28cf0c815bf1021ee770dc4395be6f09d"
 
       def install
         bin.install "val"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/val/releases/download/v0.0.3/val-0.0.3-linux_arm64.tar.gz"
-      sha256 "333b1e343f147f07cd4de7afa74c32ec02cf74ecdbff86bf4cf6783e5f045580"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/val/releases/download/v0.1.0/val-0.1.0-linux_amd64.tar.gz"
+      sha256 "e3cf1b43d9c30c039cb7e00541154562f47ce3efe7ed664fd0b24397ff1731e4"
 
       def install
         bin.install "val"
