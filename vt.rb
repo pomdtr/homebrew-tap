@@ -5,20 +5,20 @@
 class Vt < Formula
   desc ""
   homepage "https://github.com/pomdtr/vt"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.0/vt-0.2.0-darwin_arm64.tar.gz"
-      sha256 "f60f36088c86799bb245d386414c399da326b8c11f508b36e081f4e081b0fd4e"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.1/vt-0.2.1-darwin_amd64.tar.gz"
+      sha256 "81f74137bf2f9d54b645dce80254c3130c24181b90647e259ba8c4aaa6acec2a"
 
       def install
         bin.install "vt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.0/vt-0.2.0-darwin_amd64.tar.gz"
-      sha256 "70ba74f964ec4e7437ae330e7f33ac6c55263424b12501d40196789ed99d4008"
+    if Hardware::CPU.arm?
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.1/vt-0.2.1-darwin_arm64.tar.gz"
+      sha256 "cd6785601e6ce5ff0ae9d8ccf4da7858e138a69bb68ee362418666fc73d810b5"
 
       def install
         bin.install "vt"
@@ -27,17 +27,17 @@ class Vt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.0/vt-0.2.0-linux_amd64.tar.gz"
-      sha256 "ae36ae1af8ad08ec873f33119da27c1393297b725a42f61a2af5d1f99ec2a101"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.1/vt-0.2.1-linux_arm64.tar.gz"
+      sha256 "de6992ce5f4ded9d67bb3928ec952fbaed194acb345861bb358c2895e5c9504c"
 
       def install
         bin.install "vt"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.0/vt-0.2.0-linux_arm64.tar.gz"
-      sha256 "d72ca1b015783f51b2b173d5b0a129f2875e803bdf30c167cc97e096f83090fc"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.1/vt-0.2.1-linux_amd64.tar.gz"
+      sha256 "adfbe9d855afa09f8c3ca29350668692bdabbf3287ee0fa0818b5802a1036dd9"
 
       def install
         bin.install "vt"
