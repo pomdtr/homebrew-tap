@@ -5,20 +5,20 @@
 class Vt < Formula
   desc ""
   homepage "https://github.com/pomdtr/vt"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.2/vt-0.2.2-darwin_amd64.tar.gz"
-      sha256 "19befbfd18f853c00204b80762920833ffc4525e392b711ea2df7ef518c65b31"
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.3/vt-0.2.3-darwin_amd64.tar.gz"
+      sha256 "bda773b854ee79746f9c2fe46280ca78cb50ffd0186e8c505873a88613be65ca"
 
       def install
         bin.install "vt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.2/vt-0.2.2-darwin_arm64.tar.gz"
-      sha256 "c9a2bf9b0f2f9a6e65fd42755cfb25cf70b415c2a928c2283690da02271b309e"
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.3/vt-0.2.3-darwin_arm64.tar.gz"
+      sha256 "603226a0f51cd7ea178d1970b058f5d02264b37f0c7af6f37cb83e9782b39115"
 
       def install
         bin.install "vt"
@@ -27,17 +27,17 @@ class Vt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.2/vt-0.2.2-linux_amd64.tar.gz"
-      sha256 "2e50a569802d96ef47a0bb43751b3ebc3e15ea27a042b548c9bf94c3fe6ef655"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.3/vt-0.2.3-linux_arm64.tar.gz"
+      sha256 "c72c9f3309cc0d773c3a5a57728305ddf4d0dd43d4cda50f92e72633ee24361e"
 
       def install
         bin.install "vt"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/vt/releases/download/v0.2.2/vt-0.2.2-linux_arm64.tar.gz"
-      sha256 "728e24a5c3d4c155ccce4773f0218b876fce34c6099aa7709623736dfc2b2a82"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/vt/releases/download/v0.2.3/vt-0.2.3-linux_amd64.tar.gz"
+      sha256 "38c7bd7a3aa4660ea0a93eba4cdd6327aa0e3ebd749bb570243993c443dd0c82"
 
       def install
         bin.install "vt"
