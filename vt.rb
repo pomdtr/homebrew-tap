@@ -5,20 +5,20 @@
 class Vt < Formula
   desc ""
   homepage "https://github.com/pomdtr/vt"
-  version "0.3.1"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/vt/releases/download/v0.3.1/vt-0.3.1-darwin_arm64.tar.gz"
-      sha256 "cf3d6d86ec4b11ed728569fa15fa5600859723984763257c70c328f14bea0bf3"
+      url "https://github.com/pomdtr/vt/releases/download/v0.4.0/vt-0.4.0-darwin_arm64.tar.gz"
+      sha256 "cd9cf6fbf42fad49f4d3c1807f39606edd8ef5d3fa429b9dddfbf79728c6b3c0"
 
       def install
         bin.install "vt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/vt/releases/download/v0.3.1/vt-0.3.1-darwin_amd64.tar.gz"
-      sha256 "b47a02c21c10f243b782f45fe344a1c01e69a96a8da2e0e4c3adfed0dfd5cb1e"
+      url "https://github.com/pomdtr/vt/releases/download/v0.4.0/vt-0.4.0-darwin_amd64.tar.gz"
+      sha256 "c502368a60a9b7f91c8217ae76dcc640980c276d34d570d1ec639276bc34ae8e"
 
       def install
         bin.install "vt"
@@ -28,16 +28,16 @@ class Vt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/vt/releases/download/v0.3.1/vt-0.3.1-linux_amd64.tar.gz"
-      sha256 "c46724142182ffa155b14a31e2412a89049fc69c10d676a171c5e59d97b78df5"
+      url "https://github.com/pomdtr/vt/releases/download/v0.4.0/vt-0.4.0-linux_amd64.tar.gz"
+      sha256 "ca601c3bcd31c2f5f82b0811f724bb2b15fe0504832cf1a2a51334d90497042e"
 
       def install
         bin.install "vt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/vt/releases/download/v0.3.1/vt-0.3.1-linux_arm64.tar.gz"
-      sha256 "8cab74915257b3558accec5d407fae3a40cdf8bc6b927523a7969d0cb4c811ce"
+      url "https://github.com/pomdtr/vt/releases/download/v0.4.0/vt-0.4.0-linux_arm64.tar.gz"
+      sha256 "1a0f778a677f02d11be522f0b2d0cf69ef91ec5acf3cf70122c52206ad842be3"
 
       def install
         bin.install "vt"
