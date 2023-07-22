@@ -5,12 +5,12 @@
 class Wesh < Formula
   desc ""
   homepage "https://pomdtr.github.io/wesh"
-  version "0.0.1"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/wesh/releases/download/v0.0.1/wesh-0.0.1-darwin_amd64.tar.gz"
-      sha256 "16274951fa8d9beacf56ff4c33dfca32cbc0f6fc366a95c284caec2e22df8006"
+      url "https://github.com/pomdtr/wesh/releases/download/v0.1.0/wesh-0.1.0-darwin_amd64.tar.gz"
+      sha256 "fd564edbd2841ff8c53a0abd5c1bcfca6ae93cb90635aca3e0e4464afef105e6"
 
       def install
         bin.install "wesh"
@@ -20,8 +20,8 @@ class Wesh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/wesh/releases/download/v0.0.1/wesh-0.0.1-darwin_arm64.tar.gz"
-      sha256 "a75cf08196c10bb505237a868fe75c1e393b78bd835982797944e4e6b824f3dd"
+      url "https://github.com/pomdtr/wesh/releases/download/v0.1.0/wesh-0.1.0-darwin_arm64.tar.gz"
+      sha256 "b50b6261f83b6d9ee3d2f0a7c0ac01a9c5fe7d93d550e9d5524108e3f979b1de"
 
       def install
         bin.install "wesh"
@@ -34,8 +34,8 @@ class Wesh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/wesh/releases/download/v0.0.1/wesh-0.0.1-linux_arm64.tar.gz"
-      sha256 "c393edf25f984e7642b8f873e1952b61c71fdf678027e2eb1e76f3dd1c2db8db"
+      url "https://github.com/pomdtr/wesh/releases/download/v0.1.0/wesh-0.1.0-linux_arm64.tar.gz"
+      sha256 "03e99892e01a8d683477efca2e9b23f8e27b7a8d8c803181d48eee025ea303de"
 
       def install
         bin.install "wesh"
@@ -45,8 +45,8 @@ class Wesh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/wesh/releases/download/v0.0.1/wesh-0.0.1-linux_amd64.tar.gz"
-      sha256 "ef110a35d0d1d64043e41dc065eee4eb564958311046eda67d6ef7974d408008"
+      url "https://github.com/pomdtr/wesh/releases/download/v0.1.0/wesh-0.1.0-linux_amd64.tar.gz"
+      sha256 "9240676a350dbb289f76a810471a6402696bd99e90fdccf7a292cfa7b2074812"
 
       def install
         bin.install "wesh"
