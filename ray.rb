@@ -9,20 +9,26 @@ class Ray < Formula
   depends_on :macos
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/ray/releases/download/v0.1.3/ray_0.1.3_darwin_arm64.tar.gz"
-      sha256 "b46d40a57403486d551e267a2519877db1cbd3108901e30e04e825a37883be9d"
-
-      def install
-        bin.install "ray"
-      end
-    end
     if Hardware::CPU.intel?
       url "https://github.com/pomdtr/ray/releases/download/v0.1.3/ray_0.1.3_darwin_amd64.tar.gz"
-      sha256 "802795f982310b63e8681d15677a9a1834ddbe4c20489a3256b9ff685d203627"
+      sha256 "4ddb503cdb39c8dbe3fb88411ba490c03886d0daee35dd8aeecf94d2aad7b259"
 
       def install
         bin.install "ray"
+        # bash_completion.install "completions/ray.bash"
+        # zsh_completion.install "completions/ray.zsh"
+        # fish_completion.install "completions/ray.fish"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/pomdtr/ray/releases/download/v0.1.3/ray_0.1.3_darwin_arm64.tar.gz"
+      sha256 "47929bda86bbef78f0f9062a98bc4586abb4a2a7a85aa8c301fd7b29fb173621"
+
+      def install
+        bin.install "ray"
+        # bash_completion.install "completions/ray.bash"
+        # zsh_completion.install "completions/ray.zsh"
+        # fish_completion.install "completions/ray.fish"
       end
     end
   end
