@@ -5,13 +5,13 @@
 class Ray < Formula
   desc ""
   homepage "https://github.com/pomdtr/ray"
-  version "0.1.3"
+  version "0.1.4"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/ray/releases/download/v0.1.3/ray_0.1.3_darwin_amd64.tar.gz"
-      sha256 "4ddb503cdb39c8dbe3fb88411ba490c03886d0daee35dd8aeecf94d2aad7b259"
+      url "https://github.com/pomdtr/ray/releases/download/v0.1.4/ray_0.1.4_darwin_amd64.tar.gz"
+      sha256 "f9d3b9019076324d77b7800482fa0ea83ff351eb47bb3c459c380ed486b0f303"
 
       def install
         bin.install "ray"
@@ -21,8 +21,8 @@ class Ray < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/ray/releases/download/v0.1.3/ray_0.1.3_darwin_arm64.tar.gz"
-      sha256 "47929bda86bbef78f0f9062a98bc4586abb4a2a7a85aa8c301fd7b29fb173621"
+      url "https://github.com/pomdtr/ray/releases/download/v0.1.4/ray_0.1.4_darwin_arm64.tar.gz"
+      sha256 "f54beb622a5c0b035e2d9ed5a7a6f69cefe5fef95b1bfd3bb98e30c42d1e172c"
 
       def install
         bin.install "ray"
