@@ -5,12 +5,12 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://pomdtr.github.io/sunbeam"
-  version "1.0.0-rc.83"
+  version "1.0.0-rc.84"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.83/sunbeam-darwin_amd64.tar.gz"
-      sha256 "8cbe0a37ef9216e5a77896984ac6f29c667c5f9bf88c1934c14837c24c6e3bab"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.84/sunbeam-darwin_amd64.tar.gz"
+      sha256 "8e122357439c396e47bbc41a30a6c9260eb4a142e1b3bb57574aec49b0230922"
 
       def install
         bin.install "sunbeam"
@@ -20,8 +20,8 @@ class Sunbeam < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.83/sunbeam-darwin_arm64.tar.gz"
-      sha256 "4ef30c2c7f7c96d9b2dea00664bbc91cff2094cce6fb0205bb45bb2c33d4f247"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.84/sunbeam-darwin_arm64.tar.gz"
+      sha256 "87214f6e1e6fb8696f11197c6bbc035e653ab44c191888e7e3d0ef001fed1bfb"
 
       def install
         bin.install "sunbeam"
@@ -33,9 +33,9 @@ class Sunbeam < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.83/sunbeam-linux_amd64.tar.gz"
-      sha256 "e4e4630328d6b11471e90188508b26dc12f31a4fccc8f565c9d82792ddf5f441"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.84/sunbeam-linux_arm64.tar.gz"
+      sha256 "5e42d6e1a29508e45b35d277b5c475f0ef23f08925c62bf190f68c8b90376681"
 
       def install
         bin.install "sunbeam"
@@ -44,9 +44,9 @@ class Sunbeam < Formula
         fish_completion.install "completions/sunbeam.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.83/sunbeam-linux_arm64.tar.gz"
-      sha256 "d58040a7b5ec9d348aeda0f0d906acc73c8e035eae98161e88cebe93377ffcfb"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.84/sunbeam-linux_amd64.tar.gz"
+      sha256 "23bada4683b3d2aef58fcc4f7ffa294f7045f72bb17c337edd4fb5dfde8766df"
 
       def install
         bin.install "sunbeam"
