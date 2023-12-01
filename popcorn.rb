@@ -5,12 +5,12 @@
 class Popcorn < Formula
   desc ""
   homepage "https://pomdtr.github.io/popcorn"
-  version "1.0.0-rc.45"
+  version "0.2.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.45/popcorn-1.0.0-rc.45-darwin_amd64.tar.gz"
-      sha256 "6b8a59b7bc6af2e7e5770b6b6ef29bc2a7f778e333c06a8c7cb064fee3b94d66"
+    if Hardware::CPU.arm?
+      url "https://github.com/pomdtr/popcorn/releases/download/v0.2.2/popcorn-0.2.2-darwin_arm64.tar.gz"
+      sha256 "7f7bfa8bf1fcafc4723a07e682823cd7074bb0b0b977e254f565dc844ab069dd"
 
       def install
         bin.install "popcorn"
@@ -19,9 +19,9 @@ class Popcorn < Formula
         fish_completion.install "completions/popcorn.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.45/popcorn-1.0.0-rc.45-darwin_arm64.tar.gz"
-      sha256 "cd6d0c60cd12e3d7579cf1c5cb5e106ec11b8df26936e142a0fcf619ec7c0841"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/popcorn/releases/download/v0.2.2/popcorn-0.2.2-darwin_amd64.tar.gz"
+      sha256 "f5c464b3ea60c3e7c0f38056cb06f7d5415bd692bba7a722f9aaf398bfd467ef"
 
       def install
         bin.install "popcorn"
@@ -34,8 +34,8 @@ class Popcorn < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.45/popcorn-1.0.0-rc.45-linux_arm64.tar.gz"
-      sha256 "62e25eba95dea1db46a1a9e4e3762f84c03f79a1b223b6d100440d09f301146a"
+      url "https://github.com/pomdtr/popcorn/releases/download/v0.2.2/popcorn-0.2.2-linux_arm64.tar.gz"
+      sha256 "0c2f998500d868714b5312786df5c8e0ec62cee7ae9a1d73e275795634612524"
 
       def install
         bin.install "popcorn"
@@ -45,8 +45,8 @@ class Popcorn < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/popcorn/releases/download/v1.0.0-rc.45/popcorn-1.0.0-rc.45-linux_amd64.tar.gz"
-      sha256 "6550841caca03c4f69d966565c9531abf719a96c0030bdf98e42a122fcf1bc5f"
+      url "https://github.com/pomdtr/popcorn/releases/download/v0.2.2/popcorn-0.2.2-linux_amd64.tar.gz"
+      sha256 "4c1f3b39656bcb24355c165c20926c2b9f43840461bd2a5cb1d625cef172f6d2"
 
       def install
         bin.install "popcorn"
