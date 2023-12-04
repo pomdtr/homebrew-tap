@@ -5,12 +5,12 @@
 class Tweety < Formula
   desc ""
   homepage "https://pomdtr.github.io/tweety"
-  version "0.3.3"
+  version "0.3.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.3/tweety-0.3.3-darwin_arm64.tar.gz"
-      sha256 "6562f143ada52de94ad87f5ff29ef24eaa33d6708d4c63375c305b2b67cee5cd"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-darwin_amd64.tar.gz"
+      sha256 "53ee1eb87e832f5dfdd9718466349a17ade2b7948c86940234aef00aa3119fce"
 
       def install
         bin.install "tweety"
@@ -19,9 +19,9 @@ class Tweety < Formula
         fish_completion.install "completions/tweety.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.3/tweety-0.3.3-darwin_amd64.tar.gz"
-      sha256 "cf1a2675144daf129f2b575ddf7bcabbccc68b0e42e681a2e019fe7aad77632c"
+    if Hardware::CPU.arm?
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-darwin_arm64.tar.gz"
+      sha256 "d3d0e32f74253d48beacf6e5e2341f9e886343e32587118aa6ff5fc48df6cb2b"
 
       def install
         bin.install "tweety"
@@ -34,8 +34,8 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.3/tweety-0.3.3-linux_arm64.tar.gz"
-      sha256 "5bc238302b85e098a9a100ccdfdd41cdc3af07b3f38e48122dd641720caad780"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-linux_arm64.tar.gz"
+      sha256 "cc0466d6c6f2c3779daa655a7dd93e24a6ff634e820f42ecb0770aa9bf3f252d"
 
       def install
         bin.install "tweety"
@@ -45,8 +45,8 @@ class Tweety < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.3/tweety-0.3.3-linux_amd64.tar.gz"
-      sha256 "cd419e0009aeaad5f623cc8db6ef938258abf22fca10943a161683f2ce35e178"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-linux_amd64.tar.gz"
+      sha256 "8fd6989fb2cee8f12288b7a2825800273eddb63062eb5d69abbe381c78ce5d44"
 
       def install
         bin.install "tweety"
