@@ -5,12 +5,12 @@
 class Tweety < Formula
   desc ""
   homepage "https://pomdtr.github.io/tweety"
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-darwin_amd64.tar.gz"
-      sha256 "53ee1eb87e832f5dfdd9718466349a17ade2b7948c86940234aef00aa3119fce"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-darwin_amd64.tar.gz"
+      sha256 "95bd3f4cc74f3c332e3c04a41f2ff051ac0cfc756f374b8ae41d60fdda12e6c8"
 
       def install
         bin.install "tweety"
@@ -20,8 +20,8 @@ class Tweety < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-darwin_arm64.tar.gz"
-      sha256 "d3d0e32f74253d48beacf6e5e2341f9e886343e32587118aa6ff5fc48df6cb2b"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-darwin_arm64.tar.gz"
+      sha256 "7b87b86316bd127f0bfe5d17123d657af0922fb76b3b77923bb70d4089ee4755"
 
       def install
         bin.install "tweety"
@@ -34,8 +34,8 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-linux_arm64.tar.gz"
-      sha256 "cc0466d6c6f2c3779daa655a7dd93e24a6ff634e820f42ecb0770aa9bf3f252d"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-linux_arm64.tar.gz"
+      sha256 "f8f059309a2649ea828a73cff468fa4a4dd3c91ecd36102474e2d9d3556b2255"
 
       def install
         bin.install "tweety"
@@ -45,8 +45,8 @@ class Tweety < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.4/tweety-0.3.4-linux_amd64.tar.gz"
-      sha256 "8fd6989fb2cee8f12288b7a2825800273eddb63062eb5d69abbe381c78ce5d44"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-linux_amd64.tar.gz"
+      sha256 "4a6c890be905602b3c7e977551557e9dca7b509aa5fa64b7ca134cc981d022c7"
 
       def install
         bin.install "tweety"
