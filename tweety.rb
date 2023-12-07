@@ -5,54 +5,42 @@
 class Tweety < Formula
   desc ""
   homepage "https://pomdtr.github.io/tweety"
-  version "0.3.5"
+  version "0.3.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-darwin_amd64.tar.gz"
-      sha256 "95bd3f4cc74f3c332e3c04a41f2ff051ac0cfc756f374b8ae41d60fdda12e6c8"
+    if Hardware::CPU.arm?
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.7/tweety-0.3.7-darwin_arm64.tar.gz"
+      sha256 "4a6f1822dbc134eb972ec077ae5bedc63efe25489cf0fdf6202e63edd2f5587b"
 
       def install
         bin.install "tweety"
-        bash_completion.install "completions/tweety.bash"
-        zsh_completion.install "completions/tweety.zsh"
-        fish_completion.install "completions/tweety.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-darwin_arm64.tar.gz"
-      sha256 "7b87b86316bd127f0bfe5d17123d657af0922fb76b3b77923bb70d4089ee4755"
+    if Hardware::CPU.intel?
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.7/tweety-0.3.7-darwin_amd64.tar.gz"
+      sha256 "4d27e00bea26fa8b128e3e3dfea9a61fbdbf3cd0e4d5a7e5f08bfe80ed3d1a9e"
 
       def install
         bin.install "tweety"
-        bash_completion.install "completions/tweety.bash"
-        zsh_completion.install "completions/tweety.zsh"
-        fish_completion.install "completions/tweety.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-linux_arm64.tar.gz"
-      sha256 "f8f059309a2649ea828a73cff468fa4a4dd3c91ecd36102474e2d9d3556b2255"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.7/tweety-0.3.7-linux_arm64.tar.gz"
+      sha256 "f34e515e8f56d8a3e22a599d56d2c9d6f19f3645576b25fed603c0c524d49429"
 
       def install
         bin.install "tweety"
-        bash_completion.install "completions/tweety.bash"
-        zsh_completion.install "completions/tweety.zsh"
-        fish_completion.install "completions/tweety.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.3.5/tweety-0.3.5-linux_amd64.tar.gz"
-      sha256 "4a6c890be905602b3c7e977551557e9dca7b509aa5fa64b7ca134cc981d022c7"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.3.7/tweety-0.3.7-linux_amd64.tar.gz"
+      sha256 "ac67d81e49c305f5b967b840046339cc3e548e7bb73249cef5d1b97fd6bfb91d"
 
       def install
         bin.install "tweety"
-        bash_completion.install "completions/tweety.bash"
-        zsh_completion.install "completions/tweety.zsh"
-        fish_completion.install "completions/tweety.fish"
       end
     end
   end
