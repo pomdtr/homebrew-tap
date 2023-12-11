@@ -5,20 +5,20 @@
 class Tweety < Formula
   desc ""
   homepage "https://pomdtr.github.io/tweety"
-  version "0.6.5"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.6.5/tweety-0.6.5-darwin_arm64.tar.gz"
-      sha256 "0ee3557b48332c2348d8175ba4a19fd348263715ee01785f874a41d10448a18a"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.7.0/tweety-0.7.0-darwin_arm64.tar.gz"
+      sha256 "a20f50d3224a1181c77976b3832786ebd9d88b4b826e8e5a1e67523c18b11a7c"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.6.5/tweety-0.6.5-darwin_amd64.tar.gz"
-      sha256 "c180c9eec32f359311fdcc4e1648b34b8f187af9a5fda39c1cab1082f0f7429a"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.7.0/tweety-0.7.0-darwin_amd64.tar.gz"
+      sha256 "ec860b8bc1774b4e674eff435c750f3e7b0266233b577e3d1673050c717d16df"
 
       def install
         bin.install "tweety"
@@ -28,20 +28,28 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.6.5/tweety-0.6.5-linux_arm64.tar.gz"
-      sha256 "d8cfc8d1892e3a1105fc3256b606e123b95c344e6a9576906039549c398ead1b"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.7.0/tweety-0.7.0-linux_arm64.tar.gz"
+      sha256 "5e7aa6278b9be5266b2711d76cf8c19a18c629074c51e22e983ea718dc2bd7ab"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.6.5/tweety-0.6.5-linux_amd64.tar.gz"
-      sha256 "bb40cecc28dd11de4c81f40c2e65e99d4325abe9cd37199f6b585f0902d48af5"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.7.0/tweety-0.7.0-linux_amd64.tar.gz"
+      sha256 "33457752583ecd84a152eeeb684e51f1c2e95eebdda8afee55ff974b4e7f85c0"
 
       def install
         bin.install "tweety"
       end
     end
+  end
+
+  service do
+    run [ opt_bin/"tweety" ]
+    keep_alive true
+    working_dir HOMEBREW_PREFIX
+    log_path var/"log/tweety.log"
+    error_log_path var/"log/tweety.log"
   end
 end
