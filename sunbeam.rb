@@ -5,12 +5,12 @@
 class Sunbeam < Formula
   desc ""
   homepage "https://sunbeam.sh"
-  version "1.0.0-rc.96"
+  version "1.0.0-rc.97"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.96/sunbeam-darwin_amd64.tar.gz"
-      sha256 "4b3f29f3500729a23f9e6999db605ff52cceb1aa6df51dcc2343d369d3b0ff37"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.97/sunbeam-darwin_amd64.tar.gz"
+      sha256 "fc8ade9cdb039eebc60cc80f10b378809caf4a589bdfde4e6fe4605ee3260353"
 
       def install
         bin.install "sunbeam"
@@ -20,8 +20,8 @@ class Sunbeam < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.96/sunbeam-darwin_arm64.tar.gz"
-      sha256 "53de24ead14069174c872da8abf3fa6ef249b747fc2f4e6e33af772dce4be297"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.97/sunbeam-darwin_arm64.tar.gz"
+      sha256 "5a434d911ecfe37b0befd658f6fc945459a0bec0aeaddf8885dbec89163945c1"
 
       def install
         bin.install "sunbeam"
@@ -34,8 +34,8 @@ class Sunbeam < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.96/sunbeam-linux_arm64.tar.gz"
-      sha256 "8f70289bebb865776cf2b479dd5fd08bc107a8b65b67623277e1b65e36b9333d"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.97/sunbeam-linux_arm64.tar.gz"
+      sha256 "723642183dde227add1eccf11e671af9897189fe73c7064ed477a1a2668c42e5"
 
       def install
         bin.install "sunbeam"
@@ -45,8 +45,8 @@ class Sunbeam < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.96/sunbeam-linux_amd64.tar.gz"
-      sha256 "318d1e0d334573460982dca00d48572d84ec616dc11e574bed2ef685b4930ffe"
+      url "https://github.com/pomdtr/sunbeam/releases/download/v1.0.0-rc.97/sunbeam-linux_amd64.tar.gz"
+      sha256 "69cfea0acb62d7750e85dca9345881d0f0d9298a7e2be5ba1bb16a5df58fa0c2"
 
       def install
         bin.install "sunbeam"
