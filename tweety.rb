@@ -5,20 +5,20 @@
 class Tweety < Formula
   desc ""
   homepage "https://pomdtr.github.io/tweety"
-  version "0.8.1"
+  version "0.8.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.8.1/tweety-0.8.1-darwin_amd64.tar.gz"
-      sha256 "336792b2f209cbf6cf102f42e17536b1c3ddc9668f61bb7c0b420461a83b60e6"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.8.2/tweety-0.8.2-darwin_amd64.tar.gz"
+      sha256 "24c8e9d8394976bb808ae10d1e62b61a0c382c42935728e1719edb2a2c0de28c"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.8.1/tweety-0.8.1-darwin_arm64.tar.gz"
-      sha256 "f4214c775cb2c8016eda346f2862dfd5e1676c0c28e82837a6ca007af51bf50e"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.8.2/tweety-0.8.2-darwin_arm64.tar.gz"
+      sha256 "01cad3b9e38747f29bff8063a195ad33835ffe10180d78085830f73f557da6b3"
 
       def install
         bin.install "tweety"
@@ -28,16 +28,16 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.8.1/tweety-0.8.1-linux_arm64.tar.gz"
-      sha256 "b63909a7b8b9f72f48a265d25a7acb9a837b2031597e9d0a36f379bc19568d04"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.8.2/tweety-0.8.2-linux_arm64.tar.gz"
+      sha256 "9262d41782b56014b1d646e78d99efd856a10c647f38cdb0cc6b6001d1228b84"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v0.8.1/tweety-0.8.1-linux_amd64.tar.gz"
-      sha256 "3c7e7a05e3482b6d23556a6a7e8a1d4696cb29929226a2c34f54179cadc90b86"
+      url "https://github.com/pomdtr/tweety/releases/download/v0.8.2/tweety-0.8.2-linux_amd64.tar.gz"
+      sha256 "80683dbed1a4e8a530ea6b9c02bf33dec2a9bb9bbc474338c7c26ca62d1f99e6"
 
       def install
         bin.install "tweety"
