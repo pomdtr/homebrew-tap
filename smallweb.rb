@@ -5,20 +5,20 @@
 class Smallweb < Formula
   desc ""
   homepage "https://pomdtr.github.io/smallweb"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/pomdtr/smallweb/releases/download/v0.3.1/smallweb_0.3.1_darwin_amd64.tar.gz"
-      sha256 "d69737b8f29a72a95abd8f4bd64facab05d0b2dc331edcd21c46108c1077c8da"
+      url "https://github.com/pomdtr/smallweb/releases/download/v0.3.2/smallweb_0.3.2_darwin_amd64.tar.gz"
+      sha256 "ff3dc39d9241485b15a46962fd0a95f7f7b17aea839598975f30e783c943911b"
 
       def install
         bin.install "smallweb"
       end
     end
     on_arm do
-      url "https://github.com/pomdtr/smallweb/releases/download/v0.3.1/smallweb_0.3.1_darwin_arm64.tar.gz"
-      sha256 "0c81248a9bd6272ab0ae7fb2e5810cca7284af8cad89afa11d6d4d7be08544bd"
+      url "https://github.com/pomdtr/smallweb/releases/download/v0.3.2/smallweb_0.3.2_darwin_arm64.tar.gz"
+      sha256 "865b73f58fd5573462b82e3d44f59e60aea04e6ee65d7f350b3f0f076a42cd84"
 
       def install
         bin.install "smallweb"
@@ -29,8 +29,8 @@ class Smallweb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb/releases/download/v0.3.1/smallweb_0.3.1_linux_amd64.tar.gz"
-        sha256 "4f86b8a72fd2802f7b93967794ca50db0c86709ab68ebc10f547893bbb91c666"
+        url "https://github.com/pomdtr/smallweb/releases/download/v0.3.2/smallweb_0.3.2_linux_amd64.tar.gz"
+        sha256 "bf4b67966286ce1b063e9e7bf8f7d1b57e212a01dd0cc96b0aee9a91f3f0f8a3"
 
         def install
           bin.install "smallweb"
@@ -39,8 +39,8 @@ class Smallweb < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb/releases/download/v0.3.1/smallweb_0.3.1_linux_arm64.tar.gz"
-        sha256 "5e997ac92749801d0b3f6e4edc94abf24b211000183567206b6c87070b011a38"
+        url "https://github.com/pomdtr/smallweb/releases/download/v0.3.2/smallweb_0.3.2_linux_arm64.tar.gz"
+        sha256 "2caf07d86235a78a972715aae00e742882da73b573b3d223a471aefd4a939f60"
 
         def install
           bin.install "smallweb"
@@ -50,7 +50,7 @@ class Smallweb < Formula
   end
 
   service do
-    run [ opt_bin/"smallweb", "serve", "--port=7777" ]
+    run [ opt_bin/"smallweb", "serve" ]
     keep_alive true
     working_dir HOMEBREW_PREFIX
     log_path var/"log/smallweb.log"
