@@ -5,20 +5,20 @@
 class Smallweb < Formula
   desc ""
   homepage "https://smallweb-docs.pomdtr.me"
-  version "0.5.6"
+  version "0.5.7"
 
   on_macos do
     on_intel do
-      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.6/smallweb-releases_0.5.6_darwin_amd64.tar.gz"
-      sha256 "003a14c2f612a7e244e0e6cf8bcd3953060038f323af6762a38ec364ac4dd1a7"
+      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.7/smallweb-releases_0.5.7_darwin_amd64.tar.gz"
+      sha256 "c0869d6dec804e2e7d1a9adb96a44f5e457a8afd396fa227d87d7a36b6c830dd"
 
       def install
         bin.install "smallweb"
       end
     end
     on_arm do
-      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.6/smallweb-releases_0.5.6_darwin_arm64.tar.gz"
-      sha256 "02f6ceb93d376ffcfbf6746e3269008448c1da1cacb56199c4a04da8055e8b9b"
+      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.7/smallweb-releases_0.5.7_darwin_arm64.tar.gz"
+      sha256 "ce8530a412139540b7b23e05c1f6a93b0ac762af8eb032e0c348070e46652b74"
 
       def install
         bin.install "smallweb"
@@ -29,8 +29,8 @@ class Smallweb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.6/smallweb-releases_0.5.6_linux_amd64.tar.gz"
-        sha256 "1c432200f1acabaf99c491c7e0e78e969040b12fe46e0036587c7a4a20ed8f2c"
+        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.7/smallweb-releases_0.5.7_linux_amd64.tar.gz"
+        sha256 "8ea12ea9bdd67b8346456987fd52498efee3bb6cf764724e3de0db51191e9b6e"
 
         def install
           bin.install "smallweb"
@@ -39,8 +39,8 @@ class Smallweb < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.6/smallweb-releases_0.5.6_linux_arm64.tar.gz"
-        sha256 "b539768589867df7f35f2dc35b1a5b0ef2e3a325dcfe0bd5f499e30da4e470db"
+        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.5.7/smallweb-releases_0.5.7_linux_arm64.tar.gz"
+        sha256 "c7fd7c940e7ebcfac883b527338892b1262869bbd49e539948a9c123a570621a"
 
         def install
           bin.install "smallweb"
