@@ -10,7 +10,7 @@ class Smallweb < Formula
   on_macos do
     on_intel do
       url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.9.0-rc.3/smallweb_Darwin_x86_64.tar.gz"
-      sha256 "5763e093363e7afd5f52983d5d92fa18e20eb2c664ef1d904703574a38379772"
+      sha256 "8f79be7bc6a3dfc47defceed3a519ab5da67459dd5bd9c9c907d3cbf076ae234"
 
       def install
         bin.install "smallweb"
@@ -18,7 +18,7 @@ class Smallweb < Formula
     end
     on_arm do
       url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.9.0-rc.3/smallweb_Darwin_arm64.tar.gz"
-      sha256 "39503925eda0f19226550e5af84713084725e2f42ad1c7636062f934e38d4c6c"
+      sha256 "225f678c27bba56d272380632f5708403df51d1a68ba13553177b98b4d315143"
 
       def install
         bin.install "smallweb"
@@ -30,7 +30,7 @@ class Smallweb < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.9.0-rc.3/smallweb_Linux_x86_64.tar.gz"
-        sha256 "814d75a46208ba71b5f1953a3c64356d45135b5354282c05cf3b1619326da72a"
+        sha256 "c4e14fae7b41bdcf26c4515b70d5a59981d24080b4af5c07d748015608a37095"
 
         def install
           bin.install "smallweb"
@@ -40,7 +40,7 @@ class Smallweb < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.9.0-rc.3/smallweb_Linux_arm64.tar.gz"
-        sha256 "2ac8e897ce9489224df070533f6b7f74b4a5088d1b42de0aef6d49437fa3e4de"
+        sha256 "6ce7ea35bd66e230d241001657a7c7a702bd7cd4d9cc136b1ea4dffbcae7477c"
 
         def install
           bin.install "smallweb"
