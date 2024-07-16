@@ -5,20 +5,20 @@
 class Smallweb < Formula
   desc ""
   homepage "https://smallweb.run"
-  version "0.11.0-rc.1"
+  version "0.10.10"
 
   on_macos do
     on_intel do
-      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0-rc.1/smallweb_Darwin_x86_64.tar.gz"
-      sha256 "b1bcd73bf7e859953f97f633e9bfa7f5eebf305ea5f260cf2138f5dba46a1814"
+      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.10.10/smallweb_Darwin_x86_64.tar.gz"
+      sha256 "17d7e2a4698f6355a0a0b8f94c34da065353bec27b3dda6e38031290fd3f02b5"
 
       def install
         bin.install "smallweb"
       end
     end
     on_arm do
-      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0-rc.1/smallweb_Darwin_arm64.tar.gz"
-      sha256 "daf87f998be019c4eb7afc09a4acec1d07319cdacf290e57db0b2ee1d16121d5"
+      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.10.10/smallweb_Darwin_arm64.tar.gz"
+      sha256 "5cdcebe213a0868b13d167de87cc6fbf1c12d832f114911f87bdb4a8b4dcc092"
 
       def install
         bin.install "smallweb"
@@ -29,8 +29,8 @@ class Smallweb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0-rc.1/smallweb_Linux_x86_64.tar.gz"
-        sha256 "e2d73ed227ae32a611cd329c1ebfd32ef7edb8c45dced51e987d2a9c74516185"
+        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.10.10/smallweb_Linux_x86_64.tar.gz"
+        sha256 "b1c840c15220896b4c5f5a9227389ce7347f5f047381cd0d0b465b5b313afcd4"
 
         def install
           bin.install "smallweb"
@@ -39,8 +39,8 @@ class Smallweb < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0-rc.1/smallweb_Linux_arm64.tar.gz"
-        sha256 "282e0966e46ad552efe1ac12b388fa9cf71c4d8cca41f939ad7223ef1e647e81"
+        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.10.10/smallweb_Linux_arm64.tar.gz"
+        sha256 "9b761eaca70ecc05c7c5c6c360d0a8a41d1d14cab292e533ff66fb45651fca37"
 
         def install
           bin.install "smallweb"
