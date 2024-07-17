@@ -5,20 +5,20 @@
 class Smallweb < Formula
   desc ""
   homepage "https://smallweb.run"
-  version "0.11.0"
+  version "0.11.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0/smallweb_Darwin_x86_64.tar.gz"
-      sha256 "07a43b67c21c4031179440ef69d777009023e619041dd9c7b93fa82c057dd8f4"
+      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.1/smallweb_Darwin_x86_64.tar.gz"
+      sha256 "ef20c135caa9132bf50ed44c55abfd9225ec050b826632f13904d96ff83c04de"
 
       def install
         bin.install "smallweb"
       end
     end
     on_arm do
-      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0/smallweb_Darwin_arm64.tar.gz"
-      sha256 "80ce0ab9271314b4e659158670e12d585a32a4353976655b26766fd05da0fd5e"
+      url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.1/smallweb_Darwin_arm64.tar.gz"
+      sha256 "77e6daa16c4a4ab50f769a0f601bf8bdac78e67c779b62b6584dfe305018d8db"
 
       def install
         bin.install "smallweb"
@@ -29,8 +29,8 @@ class Smallweb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0/smallweb_Linux_x86_64.tar.gz"
-        sha256 "526f1fb2ccd38546844158de63c3936bec66a994bc1d657a0159d1bfed7308bb"
+        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.1/smallweb_Linux_x86_64.tar.gz"
+        sha256 "f5ec6b3fc8013e53ad1f9cd0ef0cf19e6109aff28ecdf2b2fe77c57cb628818c"
 
         def install
           bin.install "smallweb"
@@ -39,8 +39,8 @@ class Smallweb < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.0/smallweb_Linux_arm64.tar.gz"
-        sha256 "2d52e827717188b8fab1b5ea613cc326ef7c0d5361cc7f44715e8b8a9d53c3b9"
+        url "https://github.com/pomdtr/smallweb-releases/releases/download/v0.11.1/smallweb_Linux_arm64.tar.gz"
+        sha256 "2bf3305d3b165daee543d1a9e4bae5999d3e12e5b12ca6feb5fee52d0869068b"
 
         def install
           bin.install "smallweb"
