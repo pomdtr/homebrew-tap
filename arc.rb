@@ -10,7 +10,7 @@ class Arc < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/pomdtr/arc/releases/download/v0.2.4/arc_0.2.4_darwin_amd64.tar.gz"
-    sha256 "5c10c9ad0a177bc278cdf14a722af9d759ffcfbc2b55dd1196a0c87d08518c79"
+    sha256 "c0d07a23abc2429125a487cd8e46a6d9cccca987e42483b634b4804f43dcc64c"
 
     def install
       bin.install "arc"
@@ -21,7 +21,7 @@ class Arc < Formula
   end
   if Hardware::CPU.arm?
     url "https://github.com/pomdtr/arc/releases/download/v0.2.4/arc_0.2.4_darwin_arm64.tar.gz"
-    sha256 "dfece00250d9e3ad7a9692e1a75d830b59623b88307b27d9c68a74b9963f8aad"
+    sha256 "df459839db3b16abd225b63de4a5a42f30612b506f42134f3efd2aa1c0bb2e7f"
 
     def install
       bin.install "arc"
