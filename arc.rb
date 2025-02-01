@@ -5,12 +5,12 @@
 class Arc < Formula
   desc ""
   homepage "https://github.com/pomdtr/arc"
-  version "0.2.1"
+  version "0.2.4"
   depends_on :macos
 
-  on_intel do
-    url "https://github.com/pomdtr/arc/releases/download/v0.2.1/arc_0.2.1_darwin_amd64.tar.gz"
-    sha256 "b5aee0c342191226d4105069cebe23f4073417a00eaec70b05ce5f65c4c3e1d6"
+  if Hardware::CPU.intel?
+    url "https://github.com/pomdtr/arc/releases/download/v0.2.4/arc_0.2.4_darwin_amd64.tar.gz"
+    sha256 "6b5a8c4db79010167fda46e6571cac0836a35d2a5ff25c6b9ffd7f861090f7a4"
 
     def install
       bin.install "arc"
@@ -19,9 +19,9 @@ class Arc < Formula
       fish_completion.install "completions/arc.fish"
     end
   end
-  on_arm do
-    url "https://github.com/pomdtr/arc/releases/download/v0.2.1/arc_0.2.1_darwin_arm64.tar.gz"
-    sha256 "23beeaab9643c7a703f32f44fdee6ca5aa6f382c5f5dcbd56e8b1f38b208d3cf"
+  if Hardware::CPU.arm?
+    url "https://github.com/pomdtr/arc/releases/download/v0.2.4/arc_0.2.4_darwin_arm64.tar.gz"
+    sha256 "f543f6cdc1ebfd81a487d667304b1c67d17d48177f3d56ff0ec27e8a5360111c"
 
     def install
       bin.install "arc"
