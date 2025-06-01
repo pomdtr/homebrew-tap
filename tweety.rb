@@ -5,20 +5,20 @@
 class Tweety < Formula
   desc ""
   homepage "https://github.com/pomdtr/tweety"
-  version "2.0.0-rc.2"
+  version "2.0.0-rc.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.2/tweety-2.0.0-rc.2-darwin_amd64.tar.gz"
-      sha256 "78ebad1f24ba5d90accfb566b2808517e0bd76011d633bb10042ef8772550b26"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.3/tweety-2.0.0-rc.3-darwin_amd64.tar.gz"
+      sha256 "d5335b55aeb1ebb3198c40350e14c7b094f9be4c657d20868eb98160833d3f6a"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.2/tweety-2.0.0-rc.2-darwin_arm64.tar.gz"
-      sha256 "be1ce46906e595dc8aaf1d48dcfb522a2e72768e6636a9c1a8a8a9f3a098504f"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.3/tweety-2.0.0-rc.3-darwin_arm64.tar.gz"
+      sha256 "589734e3ec1b0ec2d6a9dc9db5abe7930faa9564c3d9049a213e7dbb88baa369"
 
       def install
         bin.install "tweety"
@@ -28,15 +28,15 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.2/tweety-2.0.0-rc.2-linux_amd64.tar.gz"
-      sha256 "48b1ab36679b9dcf8b067c1467c679ed13147c577d865be75a55174c2a6474f2"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.3/tweety-2.0.0-rc.3-linux_amd64.tar.gz"
+      sha256 "03f6dc7af21118c7c4dcfde4b21130e0c3fce5be238c767695fc5785dce6686f"
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.2/tweety-2.0.0-rc.2-linux_arm64.tar.gz"
-      sha256 "32d26f87e45f30ea4069c04c4125372f50f9979a71edbd4291362599e05edded"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.0.0-rc.3/tweety-2.0.0-rc.3-linux_arm64.tar.gz"
+      sha256 "f70f5a44a9068aa217e3386dec2aa8351a0c104fc3aa2ff07685e54f0eeae827"
       def install
         bin.install "tweety"
       end
