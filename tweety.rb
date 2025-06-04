@@ -5,20 +5,20 @@
 class Tweety < Formula
   desc ""
   homepage "https://github.com/pomdtr/tweety"
-  version "2.1.2"
+  version "2.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.2/tweety-2.1.2-darwin_amd64.tar.gz"
-      sha256 "8fabad4ac1d40e4ab5a4667e4dcf90b8ba4577217a5106e17581d8613196bed4"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.3/tweety-2.1.3-darwin_amd64.tar.gz"
+      sha256 "8d30b12cbc102ef349c4c99ef50c8cff3dfabac6e08cf9abbfa1e59111b88b8b"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.2/tweety-2.1.2-darwin_arm64.tar.gz"
-      sha256 "9b2350d57b1fde82c5232a711d4e7646f16e30f3ab8324a5f3a0d6c7e08e9b4f"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.3/tweety-2.1.3-darwin_arm64.tar.gz"
+      sha256 "637a5c1493fbf429025040a0f30dc9b7dc2db155ce55a2509c1a786f7ed228cf"
 
       def install
         bin.install "tweety"
@@ -28,27 +28,29 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.2/tweety-2.1.2-linux_amd64.tar.gz"
-      sha256 "c3f0321351c3ba8ef3d8a84b3242afa8eaa2f48adc1677880e4c037f493568be"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.3/tweety-2.1.3-linux_amd64.tar.gz"
+      sha256 "af26c626a48b2cf740ac4bb6b0f49c50fa664baa021cc1ddaac14ed0518b7d62"
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.2/tweety-2.1.2-linux_arm64.tar.gz"
-      sha256 "64c984b16dceb9830d4608c7316d8dc82376a49058d978886fe37c5871397bbe"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.3/tweety-2.1.3-linux_arm64.tar.gz"
+      sha256 "ec2f575d2ed9a01738c3297eab1f3ab599c8269204f901f95e3aed48b1f44972"
       def install
         bin.install "tweety"
       end
     end
   end
 
+  def post_install
+    system "#{bin}/tweety", "install", "extension", "--overwrite", "#{share}/tweety/extensions/chrome"
+  end
+
   def caveats
     <<~EOS
       After installation, run:
-        tweety install --overwrite
-      This will install files into:
-        ~/.local/share/tweety
+        tweety install manifest
     EOS
   end
 end
