@@ -5,52 +5,52 @@
 class Tweety < Formula
   desc ""
   homepage "https://github.com/pomdtr/tweety"
-  version "2.1.4"
+  version "2.1.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.4/tweety-2.1.4-darwin_amd64.tar.gz"
-      sha256 "e70d658df1d50ea0706963937255d70c1db0d46350191b149bc63cfea6646252"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.5/tweety-2.1.5-darwin_amd64.tar.gz"
+      sha256 "c2797154db90108f29ea61a600fab23302e6f7a3053dca4153f3ce98415e2034"
 
       def install
         bin.install "tweety"
-        bash_completion.install "completions/sunbeam.bash"
-        zsh_completion.install "completions/sunbeam.zsh"
-        fish_completion.install "completions/sunbeam.fish"
+        bash_completion.install "completions/tweety.bash"
+        zsh_completion.install "completions/tweety.zsh"
+        fish_completion.install "completions/tweety.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.4/tweety-2.1.4-darwin_arm64.tar.gz"
-      sha256 "f3e82b11dbaaa651c93136786fd63407ff1eb417f99d74f59ee131c6751b610b"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.5/tweety-2.1.5-darwin_arm64.tar.gz"
+      sha256 "2f61507057b67ae689ddcbc1576b88f9e808edd810f6aa42da108cb37be53fe3"
 
       def install
         bin.install "tweety"
-        bash_completion.install "completions/sunbeam.bash"
-        zsh_completion.install "completions/sunbeam.zsh"
-        fish_completion.install "completions/sunbeam.fish"
+        bash_completion.install "completions/tweety.bash"
+        zsh_completion.install "completions/tweety.zsh"
+        fish_completion.install "completions/tweety.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.4/tweety-2.1.4-linux_amd64.tar.gz"
-      sha256 "26d679c3216c58d6e92b20e763791616aaa15ba6ca63dcd7a34a9676cffa02c8"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.5/tweety-2.1.5-linux_amd64.tar.gz"
+      sha256 "b5f27a874ed25222225b03bb6e2caa397b5ddebd9155ae539b146dc2528520b1"
       def install
         bin.install "tweety"
-        bash_completion.install "completions/sunbeam.bash"
-        zsh_completion.install "completions/sunbeam.zsh"
-        fish_completion.install "completions/sunbeam.fish"
+        bash_completion.install "completions/tweety.bash"
+        zsh_completion.install "completions/tweety.zsh"
+        fish_completion.install "completions/tweety.fish"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.4/tweety-2.1.4-linux_arm64.tar.gz"
-      sha256 "e5051f4fc2b6d0af92a441cb615e745c46f7529ab93bf0f8ee7c176d91d6adce"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.5/tweety-2.1.5-linux_arm64.tar.gz"
+      sha256 "133dfda090709ab6f44b0639fbc1bef8e87b0563a0a42c6eb85f45a3b842e219"
       def install
         bin.install "tweety"
-        bash_completion.install "completions/sunbeam.bash"
-        zsh_completion.install "completions/sunbeam.zsh"
-        fish_completion.install "completions/sunbeam.fish"
+        bash_completion.install "completions/tweety.bash"
+        zsh_completion.install "completions/tweety.zsh"
+        fish_completion.install "completions/tweety.fish"
       end
     end
   end
