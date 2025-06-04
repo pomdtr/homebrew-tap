@@ -5,20 +5,20 @@
 class Tweety < Formula
   desc ""
   homepage "https://github.com/pomdtr/tweety"
-  version "2.0.7"
+  version "2.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.7/tweety-2.0.7-darwin_amd64.tar.gz"
-      sha256 "9d502423972d45382eec6561d806b624e3cadff2bdf0355272f25f7ad1f7deff"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-darwin_amd64.tar.gz"
+      sha256 "9a8a58a607c2ce876cf3c53bd507f7b75529ccae87cf6ed9d2481c536c3021e3"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.7/tweety-2.0.7-darwin_arm64.tar.gz"
-      sha256 "031927f5a9276b0a651740c8358a8e6e697089c502ab7bba3cc308f2363aca4a"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-darwin_arm64.tar.gz"
+      sha256 "ec7cc0b142c09a5004cf2e7969b2ffac07176685c3b7aff8992b3745b6b0be9d"
 
       def install
         bin.install "tweety"
@@ -28,18 +28,22 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.7/tweety-2.0.7-linux_amd64.tar.gz"
-      sha256 "5c8e26f3e9973f24a6708839937fd6cb99084fc107c443d4ad571129533ea740"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-linux_amd64.tar.gz"
+      sha256 "d22bf5772c8c1ba91e605f941bcddb0ed977d12317c7f6be6057c4dd1f7e8f95"
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.0.7/tweety-2.0.7-linux_arm64.tar.gz"
-      sha256 "7f7e0a3ac1dc0ea0b398392e0041f853b2e648fc316efad6023088da4f456ab8"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-linux_arm64.tar.gz"
+      sha256 "7394b9a2a54b472c670de1663eea56d115b279c33b748c3490cce34facf654eb"
       def install
         bin.install "tweety"
       end
     end
+  end
+
+  def post_install
+    system "#{bin}/tweety", "install", "--overwrite"
   end
 end
