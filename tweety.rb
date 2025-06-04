@@ -5,20 +5,20 @@
 class Tweety < Formula
   desc ""
   homepage "https://github.com/pomdtr/tweety"
-  version "2.1.0"
+  version "2.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-darwin_amd64.tar.gz"
-      sha256 "9a8a58a607c2ce876cf3c53bd507f7b75529ccae87cf6ed9d2481c536c3021e3"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.1/tweety-2.1.1-darwin_amd64.tar.gz"
+      sha256 "f91a67ed62c47cb9563ed6a32922b4697ee6d90a307943020888554fe6c6fc2f"
 
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-darwin_arm64.tar.gz"
-      sha256 "ec7cc0b142c09a5004cf2e7969b2ffac07176685c3b7aff8992b3745b6b0be9d"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.1/tweety-2.1.1-darwin_arm64.tar.gz"
+      sha256 "4ea8311998c097391f3caec0bbe831af24e40a476467ad054b3247c9cb98ac8c"
 
       def install
         bin.install "tweety"
@@ -28,15 +28,15 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-linux_amd64.tar.gz"
-      sha256 "d22bf5772c8c1ba91e605f941bcddb0ed977d12317c7f6be6057c4dd1f7e8f95"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.1/tweety-2.1.1-linux_amd64.tar.gz"
+      sha256 "0fbb95af264e5581a08cf8070cfd47175db3f55361b423bea40c8fdd62415202"
       def install
         bin.install "tweety"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.1.0/tweety-2.1.0-linux_arm64.tar.gz"
-      sha256 "7394b9a2a54b472c670de1663eea56d115b279c33b748c3490cce34facf654eb"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.1.1/tweety-2.1.1-linux_arm64.tar.gz"
+      sha256 "86fe2c4135d1cf49068990367cdde4b1c1268e3c6eb6d722078fc3ff25597140"
       def install
         bin.install "tweety"
       end
@@ -44,6 +44,6 @@ class Tweety < Formula
   end
 
   def post_install
-    system "#{bin}/tweety", "install", "--overwrite"
+    system "#{bin}/tweety", "install", "--overwrite", "--data-dir", "#{HOMEBREW_PREFIX}/share/tweety"
   end
 end
