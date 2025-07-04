@@ -5,20 +5,20 @@
 class Smallweb < Formula
   desc ""
   homepage "https://smallweb.run"
-  version "0.27.1"
+  version "0.27.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.1/smallweb_Darwin_x86_64.tar.gz"
-      sha256 "acda9067b2a0de95051e6c8b79373bc4b38247953f1921d2f7cb1c7fcdf0e2f8"
+      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.2/smallweb_Darwin_x86_64.tar.gz"
+      sha256 "e88c7b4a3ac09f1a4c45b4c645633b90d8f9f81ebf2fc635d9c974565966428b"
 
       def install
         bin.install "smallweb"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.1/smallweb_Darwin_arm64.tar.gz"
-      sha256 "ba341320b5451d730ff032bcfb5ab0b18ac98dfeca5b40a02d6fce5c51554cd6"
+      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.2/smallweb_Darwin_arm64.tar.gz"
+      sha256 "1067e1953f1c8e16b3fe829e6b223266b4f5c7d47c74484b2261939fc595d0d5"
 
       def install
         bin.install "smallweb"
@@ -28,15 +28,15 @@ class Smallweb < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.1/smallweb_Linux_x86_64.tar.gz"
-      sha256 "5b908556087154dfe79700ab3e63559ca5be59aee9df6ac13f5cf8f3b9964193"
+      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.2/smallweb_Linux_x86_64.tar.gz"
+      sha256 "ca8e1760bae8188378a3b106000c95cf9d763e37326b0d16b21f331ae068f443"
       def install
         bin.install "smallweb"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.1/smallweb_Linux_arm64.tar.gz"
-      sha256 "6cdf3bf157135bd843a7f551a1dc2224e11d7dc5d9d2e48b9b26e430494e2f3e"
+      url "https://github.com/pomdtr/smallweb/releases/download/v0.27.2/smallweb_Linux_arm64.tar.gz"
+      sha256 "695d1eab444436934b9a01348c7034c2f94e08f133d90d494ce6301e72e97b6e"
       def install
         bin.install "smallweb"
       end
