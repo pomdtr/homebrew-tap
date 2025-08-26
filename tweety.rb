@@ -5,12 +5,12 @@
 class Tweety < Formula
   desc ""
   homepage "https://github.com/pomdtr/tweety"
-  version "2.2.0"
+  version "2.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.0/tweety-2.2.0-darwin_amd64.tar.gz"
-      sha256 "5394cae15e9156b7d0b2d4b79ce7e5bebefbc6337acdb05667804cbea7110445"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-darwin_amd64.tar.gz"
+      sha256 "78a8ddb9c1aad6dba0598cca5040dacf5147de315c04151166bd3ba5527a8d51"
 
       def install
         bin.install "tweety"
@@ -21,8 +21,8 @@ class Tweety < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.0/tweety-2.2.0-darwin_arm64.tar.gz"
-      sha256 "96940b9f50fed0f578a2700762f380919c408a951be5313511f605a196aa02bf"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-darwin_arm64.tar.gz"
+      sha256 "270b11c95f640615152582037cfd105eeb14d0601480cd033c102ff6dd572a9d"
 
       def install
         bin.install "tweety"
@@ -36,8 +36,8 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.0/tweety-2.2.0-linux_amd64.tar.gz"
-      sha256 "be7277ecb8aaf1bff7da127d6c8607323573273fdf34b69de002fa9a39b4759c"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-linux_amd64.tar.gz"
+      sha256 "2c8c8a84eef068c39eef0d90011a42b926728406c9e81eec1b537fa68158174c"
       def install
         bin.install "tweety"
         (share/"tweety").install "extensions"
@@ -47,8 +47,8 @@ class Tweety < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.0/tweety-2.2.0-linux_arm64.tar.gz"
-      sha256 "ce012bd4f9942072e86ffa170421cdedc909f7418bd784b59a87358042aee9c3"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-linux_arm64.tar.gz"
+      sha256 "cdbc6a4e3e0cec40040c0d0afa6eed773987bf7fc7eb4bb4e773c79ba9df72f2"
       def install
         bin.install "tweety"
         (share/"tweety").install "extensions"
