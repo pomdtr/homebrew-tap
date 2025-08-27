@@ -5,12 +5,12 @@
 class Tweety < Formula
   desc ""
   homepage "https://github.com/pomdtr/tweety"
-  version "2.2.1"
+  version "2.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-darwin_amd64.tar.gz"
-      sha256 "78a8ddb9c1aad6dba0598cca5040dacf5147de315c04151166bd3ba5527a8d51"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.2/tweety-2.2.2-darwin_amd64.tar.gz"
+      sha256 "6cce6c25a5a54465452cadb541759cbb1ed5a232335daea1ca62e197ae14fb22"
 
       def install
         bin.install "tweety"
@@ -21,8 +21,8 @@ class Tweety < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-darwin_arm64.tar.gz"
-      sha256 "270b11c95f640615152582037cfd105eeb14d0601480cd033c102ff6dd572a9d"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.2/tweety-2.2.2-darwin_arm64.tar.gz"
+      sha256 "935a350246cda0275b8c9f7f67b807159ce2a1a280d68654ea81cb2fb5f16fda"
 
       def install
         bin.install "tweety"
@@ -36,8 +36,8 @@ class Tweety < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-linux_amd64.tar.gz"
-      sha256 "2c8c8a84eef068c39eef0d90011a42b926728406c9e81eec1b537fa68158174c"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.2/tweety-2.2.2-linux_amd64.tar.gz"
+      sha256 "96532240d4746dee8dbce92c4f48d17a1a407fc54531c971c5cd7fd861835771"
       def install
         bin.install "tweety"
         (share/"tweety").install "extensions"
@@ -47,8 +47,8 @@ class Tweety < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pomdtr/tweety/releases/download/v2.2.1/tweety-2.2.1-linux_arm64.tar.gz"
-      sha256 "cdbc6a4e3e0cec40040c0d0afa6eed773987bf7fc7eb4bb4e773c79ba9df72f2"
+      url "https://github.com/pomdtr/tweety/releases/download/v2.2.2/tweety-2.2.2-linux_arm64.tar.gz"
+      sha256 "2ba233aa608cc1a0ecdee9f54804951b6d9dfe0fd537abdb73df60e0fbc6d962"
       def install
         bin.install "tweety"
         (share/"tweety").install "extensions"
@@ -62,7 +62,7 @@ class Tweety < Formula
   def caveats
     <<~EOS
       After installation, run:
-        tweety install manifest
+        tweety install
     EOS
   end
 end
